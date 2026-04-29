@@ -28,4 +28,3 @@ Crie um banco de dados chamado `pomodoro_db` no seu PostgreSQL. No arquivo `src/
 spring.datasource.url=jdbc:postgresql://localhost:5432/pomodoro_db
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
-![Preview do Swagger](swagger-preview.png)
