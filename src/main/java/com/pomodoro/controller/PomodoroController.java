@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/pomodoro")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*") // Permite acesso de qualquer origem (ajuste em produção)
+@CrossOrigin(origins = "*")
 public class PomodoroController {
 
     private final PomodoroService pomodoroService;
@@ -24,7 +24,6 @@ public class PomodoroController {
     public ResponseEntity<PomodoroDTO.SessaoResponse> iniciar(
             @Valid @RequestBody(required = false) PomodoroDTO.IniciarRequest request) {
 
-        // Se o body for omitido, usa objeto com valores padrão
         if (request == null) request = new PomodoroDTO.IniciarRequest();
 
         PomodoroDTO.SessaoResponse response = pomodoroService.iniciarSessao(request);
